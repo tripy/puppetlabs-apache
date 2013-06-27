@@ -1,3 +1,38 @@
-class apache::mod::fcgid {
+class apache::mod::fcgid (
+  $fcgidbusyscaninterval = undef,
+  $fcgidbusytimeout = undef,
+  $fcgidcmdoptions = undef,
+  $fcgidconnecttimeout = undef,
+  $fcgiderrorscaninterval = undef,
+  $fcgididlescaninterval = undef,
+  $fcgidfixpathinfo = undef,
+  $fcgididletimeout = undef,
+  $fcgidinitialenv = undef,
+  $fcgidiotimeout = undef,
+  $fcgidipcdir = undef,
+  $fcgidmaxprocesses = undef,
+  $fcgidmaxprocessesperclass = undef,
+  $fcgidmaxrequestinmem = undef,
+  $fcgidmaxrequestlen = undef,
+  $fcgidmaxrequestsperprocess = undef,
+  $fcgidminprocessesperclass = undef,
+  $fcgidoutputbuffersize = undef,
+  $fcgidpassheader = undef,
+  $fcgidprocesslifetime = undef,
+  $fcgidprocesstablefile = undef, 
+  $fcgidspawnscore = undef,
+  $fcgidspawnscoreuplimit = undef,
+  $fcgidterminationscore = undef,
+  $fcgidtimescore = undef,
+  $fcgidzombiescaninterval = undef,
+  $fcgiwrapper_command = undef,
+  $fcgiwrapper_suffix = undef,
+) {
   apache::mod { 'fcgid': }
+  file { 'fcgid.conf':
+    ensure  => file,
+    path    => "${apache::mod_dir}/fcgid.conf",
+    content => template('apache/mod/fcgid.conf.erb'),
+    notify => Service['httpd'],
+  }
 }

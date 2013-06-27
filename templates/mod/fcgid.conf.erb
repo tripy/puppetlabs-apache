@@ -1,0 +1,83 @@
+<%- if @fcgidbusyscaninterval -%>
+FcgidBusyScanInterval <%= @fcgidbusyscaninterval %>
+<%- end -%>
+<%- if @fcgidbusytimeout -%>
+FcgidBusyTimeout <%= @fcgidbusytimeout %>
+<%- end -%>
+<%- if @fcgidcmdoptions -%>
+FcgidCmdOptions <%= @fcgidcmdoptions %>
+<%- end -%>
+<%- if @fcgidconnecttimeout -%>
+FcgidConnectTimeout <%= @fcgidconnecttimeout %>
+<%- end -%>
+<%- if @fcgiderrorscaninterval -%>
+FcgidErrorScanInterval <%= @fcgiderrorscaninterval %>
+<%- end -%>
+<%- if @fcgididlescaninterval -%>
+FcgidIdleScanInterval <%= @fcgididlescaninterval %>
+<%- end -%>
+<%- if @fcgidfixpathinfo -%>
+FcgidFixPathinfo <%= @fcgidfixpathinfo %>
+<%- end -%>
+<%- if @fcgididletimeout -%>
+FcgidIdleTimeout <%= @fcgididletimeout %>
+<%- end -%>
+<%- if @fcgidiotimeout -%>
+FcgidIOTimeout <%= @fcgidiotimeout %>
+<%- end -%>
+<%- if @fcgidipcdir -%>
+FcgidIPCDir <%= @fcgidipcdir %>
+<%- end -%>
+<%- if @fcgidmaxprocesses -%>
+FcgidMaxProcesses <%= @fcgidmaxprocesses %>
+<%- end -%>
+<%- if @fcgidmaxprocessesperclass -%>
+FcgidMaxProcessesPerClass <%= @fcgidmaxprocessesperclass %>
+<%- end -%>
+<%- if @fcgidmaxrequestinmem -%>
+FcgidMaxRequestInMem <%= @fcgidmaxrequestinmem %>
+<%- end -%>
+<%- if @fcgidmaxrequestlen -%>
+FcgidMaxRequestLen <%= @fcgidmaxrequestlen %>
+<%- end -%>
+<%- if @fcgidmaxrequestsperprocess -%>
+FcgidMaxRequestsPerProcess <%= @fcgidmaxrequestsperprocess %>
+<%- end -%>
+<%- if @fcgidminprocessesperclass -%>
+FcgidMinProcessesPerClass <%= @fcgidminprocessesperclass %>
+<%- end -%>
+<%- if @fcgidoutputbuffersize -%>
+FcgidOutputBufferSize <%= @fcgidoutputbuffersize %>
+<%- end -%>
+<%- if @fcgidpassheader -%>
+FcgidPassHeader <%= @fcgidpassheader %>
+<%- end -%>
+<%- if @fcgidprocesslifetime -%>
+FcgidProcessLifeTime <%= @fcgidprocesslifetime %>
+<%- end -%>
+<%- if @fcgidprocesstablefile -%>
+FcgidProcessTableFile <%= @fcgidprocesstablefile %>
+<%- end -%>
+<%- if @fcgidspawnscore -%>
+FcgidSpawnScore <%= @fcgidspawnscore %>
+<%- end -%>
+<%- if @fcgidspawnscoreuplimit -%>
+FcgidSpawnScoreUpLimit <%= @fcgidspawnscoreuplimit %>
+<%- end -%>
+<%- if @fcgidterminationscore -%>
+FcgidTerminationScore <%= @fcgidterminationscore %>
+<%- end -%>
+<%- if @fcgidtimescore -%>
+FcgidTimeScore <%= @fcgidtimescore %>
+<%- end -%>
+<%- if @fcgidzombiescaninterval -%>
+FcgidZombieScanInterval <%= @fcgidzombiescaninterval %>
+<%- end -%>
+<%- if @fcgidinitialenv -%>
+<% @fcgidinitialenv.each do |value| %>
+FcgidInitialEnv <%= value %>
+<% end -%>
+<%- end -%>
+<%- if @fcgiwrapper_command -%>
+FcgiWrapper <%= @fcgiwrapper_command %> <%= @fcgiwrapper_suffix %>
+<%- end -%>
